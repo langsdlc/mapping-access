@@ -1,11 +1,11 @@
 // code adapted from https://www.mapbox.com/mapbox.js/example/v1.0.0/markers-with-image-slideshow/
 
 L.mapbox.accessToken =
-	'pk.eyJ1IjoidnVsaWJyYXJ5Z2lzIiwiYSI6ImFaN2JkSlUifQ.Dl2sTO1mGKK7MCd1ViGPnQ';
+	'pk.eyJ1IjoiYWltaWhhbXJhaWUiLCJhIjoiY2lnY3UyMWRlMGUzbXZna3JxNmE4eGlzdCJ9.CC3U3b2xNiCCPINvyOPbGQ';
 
 // If you do not have a Mapbox key, refer to the readme.md
-var map = L.mapbox.map('map', "vulibrarygis.of23e6p0").setView([52.51, 13.38],
-	12);
+var map = L.mapbox.map('map', "aimihamraie.pdn8f2fi").setView([36.144, -86.806],
+	15);
 var layer = L.mapbox.featureLayer().addTo(map)
 
 // Add custom popup html to each marker
@@ -88,7 +88,7 @@ $(function() {
 
 	// list views from Cloudant that we want to offer as layers
 	var cloudantViews = [];
-	$.getJSON('https://vulibrarygis.cloudant.com/map-berlin/_design/tour/',
+	$.getJSON('https://accessvanderbilt.cloudant.com/mapping-access/_design/tour/',
 		function(result) {
 			var viewsList = result.views;
 			for (var v in viewsList) {
@@ -121,7 +121,7 @@ $("#search").submit(function(event) {
 
 function getLayer(callback, cloudantView) {
 	var cloudantURLbase =
-		"https://vulibrarygis.cloudant.com/map-berlin/_design/tour/_view/";
+		"https://accessvanderbilt.cloudant.com/mapping-access/_design/tour/_view/";
 	var cloudantURLcallback = "?callback=?";
 	var thisCloudantURL = cloudantURLbase + cloudantView + cloudantURLcallback;
 	$.getJSON(thisCloudantURL, function(result) {
@@ -137,7 +137,7 @@ function getLayer(callback, cloudantView) {
 // See http://stackoverflow.com/questions/19916894/wait-for-multiple-getjson-calls-to-finish
 function searchPoints(callback, cloudantSearch) {
 	var cloudantURLbase =
-		"https://vulibrarygis.cloudant.com/map-berlin/_design/tour/_search/ids?q=";
+		"https://accessvanderbilt.cloudant.com/mapping-access_design/tour/_search/ids?q=";
 	var cloudantURLcallback = "&callback=?";
 	var thisCloudantURL = cloudantURLbase + cloudantSearch + cloudantURLcallback;
 	$.getJSON(thisCloudantURL, function(result) {
@@ -156,7 +156,7 @@ function getPoints(cloudantIDs) {
 	}
 
 	function getPoint(id) {
-		var cloudantURLbase = "https://vulibrarygis.cloudant.com/map-berlin/";
+		var cloudantURLbase = "https://accessvanderbilt.cloudant.com/mapping-access/";
 		var url = cloudantURLbase + id;
 		return $.getJSON(url); // this returns a "promise"
 	}
