@@ -9,7 +9,7 @@
 }
 
 .navbar-brand {
-  color: #8B0000 !important;
+  color: #000000 !important;
   font-family: Georgia;
   font-size: 24px; 
 }
@@ -21,7 +21,7 @@
 
 @media (min-width: 768px) {
     .navbar-nav.navbar-right:last-child {
-        margin-right: 0px;
+    margin-right: 0px;
     }
 }
 
