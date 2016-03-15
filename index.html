@@ -14,11 +14,11 @@
   <link href="css/map.css" rel='stylesheet' />
   <link href="css/site.css" rel='stylesheet' />
 </head>
-
 <body>
-  <div class="navbar navbar-default navbar-static-top">
+<div class="navbar navbar-default navbar-fixed-top">
     <div class="navbar-header">
-      <a href="./index.html" class="navbar-brand">VU Mapping Access</a>
+      <a href="#" class="pull-left"><img id="logo" src="css/logo.png"></a>
+      <a href="index.html" class="navbar-brand">VU Mapping Access</a>
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -27,10 +27,26 @@
     </div>
     <div class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
-        <li><a href="http://www.library.vanderbilt.edu/about/historicatour.php">About</a></li>
-        <li><a href="/">Vanderbilt Library</a></li>
+        <li><a href="http://www.library.vanderbilt.edu/about/df-2016ss_mapaccess.php">About</a></li>
+        <li><a href="http://www.library.vanderbilt.edu/">Vanderbilt Library</a></li>
+      <li>
+        <form class="navbar-form" role="search" id="search">
+            <div class="form-group">
+              <input type="text" class="form-control" id="searchText" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+      </li>
       </ul>
-    </div>
+      </div>
+    <!-- /input-group -->
+  </div>
+  <!-- /row -->
+
+  <div id="layer-options">
+    <select id="layers-dropdown">
+      <option value="default">Select a Map:</option>
+    </select>
   </div>
 
   <div id="alert-vucampus" class="alert alert-warning">
