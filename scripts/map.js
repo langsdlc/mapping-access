@@ -137,7 +137,7 @@ function getLayer(callback, cloudantView) {
 // See http://stackoverflow.com/questions/19916894/wait-for-multiple-getjson-calls-to-finish
 function searchPoints(callback, cloudantSearch) {
 	var cloudantURLbase =
-		"https://accessvanderbilt.cloudant.com/mapping-access_design/tour/_search/ids?q=";
+		"https://accessvanderbilt.cloudant.com/mapping-access/design/tour/_search/ids?q=";
 	var cloudantURLcallback = "&callback=?";
 	var thisCloudantURL = cloudantURLbase + cloudantSearch + cloudantURLcallback;
 	$.getJSON(thisCloudantURL, function(result) {
@@ -183,17 +183,17 @@ function processLayer(result) {
 	// Add features to the map
 	var selection_label = $('#layers-dropdown option:selected').text();
 	if (selection_label == "1908") {
-		new_id = 'vulibrarygis.l74iic1a'
+		new_id = 'aimihamraie.pdn8f2fi'
 	} else if (selection_label == "1920") {
-		new_id = 'vulibrarygis.l366jopj'
+		new_id = 'aimihamraie.pdn8f2fi'
 	} else if (selection_label == "1936") {
-		new_id = 'vulibrarygis.l369lc2l'
+		new_id = 'aimihamraie.pdn8f2fi'
 	} else if (selection_label == "1947") {
-		new_id = 'vulibrarygis.l36anlai'
+		new_id = 'aimihamraie.pdn8f2fi'
 	} else if (selection_label == "1970") {
-		new_id = 'vulibrarygis.l36db1a5'
+		new_id = 'aimihamraie.pdn8f2fi'
 	} else {
-		new_id = 'vulibrarygis.of23e6p0'
+		new_id = 'aimihamraie.pdn8f2fi'
 	};
 	var new_layer = L.mapbox.tileLayer(new_id);
 	new_layer.addTo(map);
