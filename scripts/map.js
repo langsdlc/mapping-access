@@ -182,7 +182,7 @@ function getPoints(cloudantIDs) {
 function processLayer(result) {
 	// Add features to the map
 	var selection_label = $('#layers-dropdown option:selected').text();
-	if (selection_label == "Test") {
+	if (selection_label == "Breast Feeding Spaces") {
 		new_id = 'aimihamraie.pdn8f2fi'
 	} else if (selection_label == "1920") {
 		new_id = 'aimihamraie.pdn8f2fi'
