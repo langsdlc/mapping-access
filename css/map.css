@@ -59,3 +59,9 @@ body { margin-top: 50px; }
   top: 10px;
   z-index: 1;
 }
+
+/* Locate button */
+
+.leaflet-control-locate a.requesting {
+  padding-left: 2px;
+}
